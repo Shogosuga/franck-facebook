@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html dir="ltr"  lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <title>ろぐいん</title>
+
+</head>
+
+<body>
+    <div class="main">
+        <form method="POST" action="/details">
+        {% for ig_account in bussiness_data %}
+            <div>
+                <!--{{ bussiness_account }}-->
+                <input type="radio" name="account" value="{{ ig_account.get('ig_user_id') }}">
+                {{ ig_account.get('name') }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+
+</html>

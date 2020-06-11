@@ -7,8 +7,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                My Flask React App!
-                
+                Try to login using Facebook API
             </div>
         );
     }
