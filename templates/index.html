@@ -34,11 +34,6 @@
                 statusChangeCallback(response);      // Returns the login status.
             });
 
-            //FB.login(function(response) {
-            //    console.log('suceess!');
-            //},{
-            //    scope : 'instagram_basic,instagram_manage_insights,pages_show_list'
-            //})
         };
         
         
@@ -57,23 +52,6 @@
                 console.log('Successful login for: ' + response.name);
                 console.log(data);
                 document.location.href = "/login?accessToken=" + data.authResponse.accessToken + "&userId=" + data.authResponse.userID
-                //fetch(
-                //    './login/data', {
-                //        method : "POST",
-                //        headers : {
-                //            'Content-Type': 'application/json'
-                //        },
-                //        body : JSON.stringify({
-                //            accessToken : data.authResponse.accessToken,
-                //            userId      : data.authResponse.userID
-                //        })
-                //    }
-                //).then(
-                //    (response) => {
-                //        console.log(response)
-                //        return response.json();
-                //    }
-                //)
             });
         };
       </script>
